@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1033"/>
+      <stop offset="0.5" stop-color="#2d1b69"/>
+      <stop offset="1" stop-color="#0f2a4a"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <clipPath id="r"><rect width="900" height="260" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .blob { transform-box: fill-box; transform-origin: center; animation: float 7s ease-in-out infinite; }
+    .b2 { animation-duration: 9s; animation-delay: -3s; }
+    .b3 { animation-duration: 11s; animation-delay: -5s; }
+    @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(18px,-14px) scale(1.08); } }
+    .star { animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 0%,100% { opacity: .2; } 50% { opacity: 1; } }
+    .title { font: 800 46px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; opacity: 0; animation: up .9s ease-out .2s forwards; }
+    .sub { font: 500 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; fill: #c4b5fd; opacity: 0; animation: up .9s ease-out .7s forwards; }
+    .pill { opacity: 0; animation: up .9s ease-out 1.2s forwards; }
+    .pilltxt { font: 600 14px 'Segoe UI', Ubuntu, Arial, sans-serif; fill: #bbf7d0; }
+    .dot { animation: pulse 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: .4; } }
+    @keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .term { opacity: 0; animation: up .9s ease-out .5s forwards; }
+    .code { font: 13px 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+    .l1 { clip-path: inset(0 100% 0 0); animation: type 1.2s steps(26) 1.2s forwards; }
+    .l2 { clip-path: inset(0 100% 0 0); animation: type 1.2s steps(26) 2.4s forwards; }
+    .l3 { clip-path: inset(0 100% 0 0); animation: type 1.2s steps(26) 3.6s forwards; }
+    .l4 { clip-path: inset(0 100% 0 0); animation: type 1.2s steps(26) 4.8s forwards; }
+    @keyframes type { to { clip-path: inset(0 0 0 0); } }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <g clip-path="url(#r)">
+    <rect width="900" height="260" fill="url(#bg)"/>
+    <circle class="blob" cx="120" cy="40" r="90" fill="#f472b6" opacity=".18"/>
+    <circle class="blob b2" cx="820" cy="230" r="110" fill="#60a5fa" opacity=".18"/>
+    <circle class="blob b3" cx="520" cy="250" r="70" fill="#a78bfa" opacity=".2"/>
+    <circle class="star" cx="60" cy="200" r="2" fill="#fff"/>
+    <circle class="star" cx="300" cy="30" r="1.5" fill="#fff" style="animation-delay:-1s"/>
+    <circle class="star" cx="460" cy="70" r="2" fill="#fff" style="animation-delay:-2s"/>
+    <circle class="star" cx="610" cy="25" r="1.5" fill="#fff" style="animation-delay:-.5s"/>
+    <circle class="star" cx="860" cy="60" r="2" fill="#fff" style="animation-delay:-1.5s"/>
+    <circle class="star" cx="400" cy="225" r="1.5" fill="#fff" style="animation-delay:-2.5s"/>
+  </g>
+
+  <text class="title" x="44" y="100" fill="url(#txt)">Hi, I'm Şilan Aybek</text>
+  <text class="sub" x="46" y="138">Software Engineering Student · Web Developer</text>
+
+  <g class="pill">
+    <rect x="44" y="164" width="262" height="34" rx="17" fill="#14532d" fill-opacity=".55" stroke="#4ade80" stroke-opacity=".6"/>
+    <circle class="dot" cx="66" cy="181" r="5" fill="#4ade80"/>
+    <text class="pilltxt" x="80" y="186">Open to internship opportunities</text>
+  </g>
+
+  <g class="term">
+    <rect x="590" y="56" width="270" height="160" rx="12" fill="#0b1020" fill-opacity=".85" stroke="#a78bfa" stroke-opacity=".4"/>
+    <circle cx="610" cy="74" r="5" fill="#ff5f57"/>
+    <circle cx="626" cy="74" r="5" fill="#febc2e"/>
+    <circle cx="642" cy="74" r="5" fill="#28c840"/>
+    <text class="code l1" x="606" y="108"><tspan fill="#f472b6">$</tspan><tspan fill="#e2e8f0"> php artisan serve</tspan></text>
+    <text class="code l2" x="606" y="134"><tspan fill="#60a5fa">&gt;&gt;&gt;</tspan><tspan fill="#e2e8f0"> import python</tspan></text>
+    <text class="code l3" x="606" y="160"><tspan fill="#fbbf24">javac</tspan><tspan fill="#e2e8f0"> Internship.java</tspan></text>
+    <text class="code l4" x="606" y="186"><tspan fill="#4ade80">✔ ready to learn &amp; build</tspan></text>
+    <rect class="cursor" x="606" y="194" width="8" height="14" fill="#a78bfa"/>
+  </g>
+</svg>

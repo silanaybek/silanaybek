@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="300" viewBox="0 0 380 300" fill="none">
+  <style>
+    .float { animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .line { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 6s ease-in-out infinite; }
+    .d1 { animation-delay: 0s; } .d2 { animation-delay: .4s; } .d3 { animation-delay: .8s; }
+    .d4 { animation-delay: 1.2s; } .d5 { animation-delay: 1.6s; } .d6 { animation-delay: 2s; }
+    @keyframes grow { 0% { transform: scaleX(0); } 15%,80% { transform: scaleX(1); } 95%,100% { transform: scaleX(0); } }
+    .icon { animation: bob 3s ease-in-out infinite; }
+    .i2 { animation-delay: -1s; } .i3 { animation-delay: -2s; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    .lbl { font: 700 13px 'Segoe UI', Ubuntu, Arial, sans-serif; fill: #fff; }
+    .steam { animation: steam 2.4s ease-out infinite; opacity: 0; }
+    .s2 { animation-delay: .8s; }
+    @keyframes steam { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: .7; } 100% { opacity: 0; transform: translateY(-18px); } }
+  </style>
+
+  <ellipse cx="190" cy="282" rx="150" ry="10" fill="#a78bfa" opacity=".15"/>
+
+  <!-- floating tech chips -->
+  <g class="icon"><rect x="18" y="40" width="64" height="30" rx="15" fill="#777BB4"/><text class="lbl" x="35" y="60">PHP</text></g>
+  <g class="icon i2"><rect x="292" y="28" width="74" height="30" rx="15" fill="#FF2D20"/><text class="lbl" x="303" y="48">Laravel</text></g>
+  <g class="icon i3"><rect x="300" y="120" width="70" height="30" rx="15" fill="#3776AB"/><text class="lbl" x="310" y="140">Python</text></g>
+  <g class="icon i2"><rect x="10" y="130" width="60" height="30" rx="15" fill="#E76F00"/><text class="lbl" x="23" y="150">Java</text></g>
+
+  <g class="float">
+    <!-- laptop screen -->
+    <rect x="90" y="70" width="200" height="140" rx="10" fill="#1e1b4b" stroke="#a78bfa" stroke-width="3"/>
+    <rect x="102" y="82" width="176" height="116" rx="4" fill="#0b1020"/>
+    <rect class="line d1" x="112" y="94" width="70" height="7" rx="3.5" fill="#f472b6"/>
+    <rect class="line d2" x="124" y="110" width="110" height="7" rx="3.5" fill="#60a5fa"/>
+    <rect class="line d3" x="124" y="126" width="84" height="7" rx="3.5" fill="#a78bfa"/>
+    <rect class="line d4" x="136" y="142" width="120" height="7" rx="3.5" fill="#fbbf24"/>
+    <rect class="line d5" x="124" y="158" width="60" height="7" rx="3.5" fill="#4ade80"/>
+    <rect class="line d6" x="112" y="174" width="40" height="7" rx="3.5" fill="#f472b6"/>
+    <!-- base -->
+    <path d="M70 214 h240 l-14 18 h-212 z" fill="#4c1d95"/>
+    <rect x="168" y="214" width="44" height="5" rx="2.5" fill="#a78bfa"/>
+  </g>
+
+  <!-- coffee -->
+  <path class="steam" d="M318 222 q6 -8 0 -16" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+  <path class="steam s2" d="M330 222 q6 -8 0 -16" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="308" y="228" width="34" height="38" rx="6" fill="#f472b6"/>
+  <path d="M342 238 h6 a8 8 0 0 1 0 16 h-6" stroke="#f472b6" stroke-width="4"/>
+</svg>
